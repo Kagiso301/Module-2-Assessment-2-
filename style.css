@@ -1,0 +1,834 @@
+/* ========================================
+   SAVANNA BITES
+   MAIN STYLESHEET
+======================================== */
+
+
+/* ---------- GENERAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffaf4;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.header {
+    background-color: #351a0e;
+    color: white;
+
+    min-height: 70px;
+
+    padding: 15px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.logo i {
+    color: #f6a623;
+}
+
+
+.logo strong {
+    color: #f6a623;
+}
+
+
+.header nav {
+    display: flex;
+    gap: 20px;
+}
+
+
+.header nav a {
+    color: white;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+.header nav a:hover {
+    color: #f6a623;
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+
+    min-height: 500px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)
+        ),
+        url("../images/burger.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 30px;
+}
+
+
+.hero-content {
+    max-width: 700px;
+}
+
+
+.hero h1 {
+    font-size: clamp(38px, 7vw, 70px);
+
+    margin-bottom: 15px;
+}
+
+
+.hero p {
+    font-size: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ---------- BUTTON ---------- */
+
+.btn {
+
+    display: inline-block;
+
+    background-color: #f6a623;
+
+    color: #351a0e;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.btn:hover {
+    background-color: #fff;
+
+    transform: translateY(-2px);
+}
+
+
+/* ---------- CONTAINER ---------- */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 70px 0;
+}
+
+
+/* ---------- SECTION TITLE ---------- */
+
+.section-title,
+.page-heading {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.section-title h2,
+.page-heading h1 {
+
+    font-size: 38px;
+
+    color: #351a0e;
+
+    margin-bottom: 10px;
+}
+
+
+.section-title p,
+.page-heading p {
+
+    color: #777;
+}
+
+
+/* ---------- CATEGORY GRID ---------- */
+
+.category-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.category-card {
+
+    background: white;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+
+    border: 1px solid #eee;
+}
+
+
+.category-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.15);
+}
+
+
+.category-icon {
+
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 20px;
+
+    background-color: #fff1d9;
+
+    color: #f6a623;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 32px;
+}
+
+
+.category-card h3 {
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+
+    color: #351a0e;
+}
+
+
+.category-card p {
+
+    color: #777;
+
+    margin-bottom: 20px;
+}
+
+
+.category-card span {
+
+    color: #d87900;
+
+    font-weight: bold;
+}
+
+
+/* ---------- FOOD GRID ---------- */
+
+.food-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.food-card {
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+
+.food-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.15);
+}
+
+
+.food-card img {
+
+    height: 230px;
+
+    object-fit: cover;
+}
+
+
+.food-info {
+
+    padding: 22px;
+}
+
+
+.food-info h2 {
+
+    color: #351a0e;
+
+    margin-bottom: 10px;
+
+    font-size: 22px;
+}
+
+
+.food-info p {
+
+    color: #777;
+
+    margin-bottom: 20px;
+}
+
+
+.food-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.food-bottom strong {
+
+    font-size: 22px;
+
+    color: #d87900;
+}
+
+
+.food-bottom span {
+
+    color: #351a0e;
+
+    font-weight: bold;
+}
+
+
+/* ---------- MEAL DETAILS ---------- */
+
+.meal-details {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.08);
+}
+
+
+.meal-image img {
+
+    height: 100%;
+
+    min-height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+
+.meal-content {
+
+    padding: 10px;
+}
+
+
+.meal-content h1 {
+
+    font-size: 42px;
+
+    color: #351a0e;
+
+    margin-bottom: 10px;
+}
+
+
+.price {
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #d87900;
+
+    margin-bottom: 15px;
+}
+
+
+.serving {
+
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+
+.meal-content h3 {
+
+    color: #351a0e;
+
+    margin: 25px 0 10px;
+
+    font-size: 20px;
+}
+
+
+/* ---------- EXTRAS ---------- */
+
+.extras {
+
+    list-style: none;
+
+    margin-bottom: 25px;
+}
+
+
+.extras li {
+
+    background-color: #fff8ed;
+
+    padding: 12px;
+
+    margin-bottom: 8px;
+
+    border-radius: 8px;
+}
+
+
+.extras input {
+
+    margin-right: 8px;
+
+    accent-color: #f6a623;
+}
+
+
+/* ---------- FORM ---------- */
+
+form label {
+
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+
+textarea {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    resize: vertical;
+
+    font-family: inherit;
+
+    margin-bottom: 15px;
+}
+
+
+textarea:focus {
+
+    outline: none;
+
+    border-color: #f6a623;
+}
+
+
+/* ---------- ORDER BUTTON ---------- */
+
+.order-btn {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 15px;
+
+    background-color: #351a0e;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.order-btn:hover {
+
+    background-color: #f6a623;
+
+    color: #351a0e;
+}
+
+
+/* ---------- SUCCESS PAGE ---------- */
+
+.success-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    background-color: #fffaf4;
+}
+
+
+.success-box {
+
+    max-width: 600px;
+
+    width: 100%;
+
+    text-align: center;
+
+    background-color: white;
+
+    padding: 60px 30px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.1);
+}
+
+
+.success-icon {
+
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 25px;
+
+    background-color: #2e9d50;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 40px;
+}
+
+
+.success-box h1 {
+
+    color: #351a0e;
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+}
+
+
+.success-box h2 {
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+
+.success-box p {
+
+    color: #777;
+
+    margin-bottom: 30px;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+
+    background-color: #351a0e;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+
+.footer-logo {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+.footer-logo i {
+
+    color: #f6a623;
+
+    margin-right: 8px;
+}
+
+
+.copyright {
+
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: #aaa;
+}
+
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+
+/* Tablets */
+
+@media (max-width: 900px) {
+
+    .category-grid,
+    .food-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .meal-details {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .meal-image img {
+
+        min-height: 350px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .header {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 15px;
+    }
+
+
+    .header nav {
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .hero {
+
+        min-height: 450px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 40px;
+    }
+
+
+    .hero p {
+
+        font-size: 17px;
+    }
+
+
+    .container {
+
+        width: 92%;
+
+        padding: 50px 0;
+    }
+
+
+    .section-title h2,
+    .page-heading h1 {
+
+        font-size: 30px;
+    }
+
+
+    .category-grid,
+    .food-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .meal-details {
+
+        padding: 15px;
+    }
+
+
+    .meal-content h1 {
+
+        font-size: 32px;
+    }
+
+
+    .meal-image img {
+
+        min-height: 280px;
+    }
+
+
+    .success-box {
+
+        padding: 45px 20px;
+    }
+
+
+    .success-box h1 {
+
+        font-size: 34px;
+    }
+
+}
